@@ -20,9 +20,9 @@ server.get('/api',(res)=>{
 server.get('/ejs',(req, res)=>{
 
     const today = new Date()
-    const currentDay = today.getDate() 
+    const todayIs = today.getDay()
     let day =''
-    if(currentDay < 6){
+    if(todayIs === 6 || todayIs === 0){
         day = "weekend"
     }else{
         day = "weekday"
